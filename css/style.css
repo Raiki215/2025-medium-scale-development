@@ -1,0 +1,18 @@
+body {
+  background-color: #E6522A;
+  color: #002C49;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-content {
+  max-width: 375px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  overflow: auto;
+  height: 100vh;
+}
+
+.mobile-content::-webkit-scrollbar {
+  display: none;
+}
