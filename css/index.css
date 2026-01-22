@@ -5,7 +5,7 @@
 }
 
 /* NEWSのコンテンツのcss */
-#top .news-title {
+#top .news-title, #top .artists-title, #top .item-title {
   font-size: 16px;
   font-weight: bold;
   text-align: center;
@@ -41,7 +41,7 @@
   margin: 0 auto;
 }
 
-#top .news-link, #top .item-link {
+#top .news-link, #top .item-link, #top .artists-link {
   font-size: 13px;
   display: block;
   font-weight: bold;
@@ -53,14 +53,6 @@
 
 #top .news-link:hover, #top .item-link:hover {
   text-decoration: underline;
-}
-
-#top .item-title {
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
-  margin: 2% 0;
-  color: #E6522A;
 }
 
 #top .item-list {
@@ -81,6 +73,30 @@
 }
 
 #top .item-text {
+  font-size: 12px;
+  text-align: center;
+  margin: 2% auto;
+}
+
+#top .artists-img {
+  object-fit: cover;
+  width: 117px;
+  height: auto;
+  margin: 0 auto;
+}
+
+#top .artists-item {
+  margin: 4% auto;
+}
+
+#top .artists-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#top .artists-name {
   font-size: 12px;
   text-align: center;
   margin: 2% auto;
