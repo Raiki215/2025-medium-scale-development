@@ -5,7 +5,7 @@
 }
 
 /* NEWSのコンテンツのcss */
-#top .news-title, #top .artists-title, #top .item-title {
+#top .news-title, #top .artists-title, #top .item-title, #top .question-title {
   font-size: 16px;
   font-weight: bold;
   text-align: center;
@@ -100,4 +100,39 @@
   font-size: 12px;
   text-align: center;
   margin: 2% auto;
+}
+
+#top .border-botted {
+  border-bottom: 2px dotted #002C49;
+  width: 75%;
+  margin: 2% auto;
+}
+
+#top .question-text {
+  font-size: 13px;
+  font-weight: bold;
+  margin: 4% auto;
+  width: 75%;
+}
+
+#top .answer-text {
+  color: #61727D;
+  font-size: 13px;
+  font-weight: bold;
+  width: 75%;
+  margin: 2% auto;
+}
+
+#top .question-link {
+  font-size: 13px;
+  display: block;
+  font-weight: bold;
+  color: #002C49;
+  text-decoration: none;
+  text-align: center;
+  margin: 4% 0;
+}
+
+#top .question-link:hover {
+  text-decoration: underline;
 }
