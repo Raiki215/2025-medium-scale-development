@@ -1,0 +1,138 @@
+#top .top-img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+/* NEWSのコンテンツのcss */
+#top .news-title, #top .artists-title, #top .item-title, #top .question-title {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin: 2% 0;
+  color: #E6522A;
+}
+
+#top .news-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#top .news-item {
+  margin: 4% auto;
+}
+
+#top .news-img {
+  object-fit: cover;
+  width: 132px;
+  height: auto;
+}
+
+#top .news-text {
+  font-size: 12px;
+  margin: 2% auto;
+}
+
+#top .news-date {
+  font-size: 11px;
+  color: #C1C1C1;
+  margin: 0 auto;
+}
+
+#top .news-link, #top .item-link, #top .artists-link {
+  font-size: 13px;
+  display: block;
+  font-weight: bold;
+  color: #002C49;
+  text-decoration: none;
+  width: 90%;
+  text-align: right;
+}
+
+#top .news-link:hover, #top .item-link:hover {
+  text-decoration: underline;
+}
+
+#top .item-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#top .official-item {
+  margin: 4% auto;
+}
+
+#top .item-img {
+  object-fit: cover;
+  width: 117px;
+  height: auto;
+}
+
+#top .item-text {
+  font-size: 12px;
+  text-align: center;
+  margin: 2% auto;
+}
+
+#top .artists-img {
+  object-fit: cover;
+  width: 117px;
+  height: auto;
+  margin: 0 auto;
+}
+
+#top .artists-item {
+  margin: 4% auto;
+}
+
+#top .artists-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#top .artists-name {
+  font-size: 12px;
+  text-align: center;
+  margin: 2% auto;
+}
+
+#top .border-botted {
+  border-bottom: 2px dotted #002C49;
+  width: 75%;
+  margin: 2% auto;
+}
+
+#top .question-text {
+  font-size: 13px;
+  font-weight: bold;
+  margin: 4% auto;
+  width: 75%;
+}
+
+#top .answer-text {
+  color: #61727D;
+  font-size: 13px;
+  font-weight: bold;
+  width: 75%;
+  margin: 2% auto;
+}
+
+#top .question-link {
+  font-size: 13px;
+  display: block;
+  font-weight: bold;
+  color: #002C49;
+  text-decoration: none;
+  text-align: center;
+  margin: 4% 0;
+}
+
+#top .question-link:hover {
+  text-decoration: underline;
+}

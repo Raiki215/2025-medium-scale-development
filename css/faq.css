@@ -1,0 +1,89 @@
+@charset "utf-8";
+/* アコーディオン全体のスタイリング */
+.accordion {
+  font-size: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* アコーディオンのヘッダー部分のスタイリング */
+.accordion-header {
+  padding: 10px;
+  background-color: #f7f7f7;
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  position: relative; /* 矢印アイコンの位置調整のため */
+  list-style: none; /* デフォルトの矢印を消す */
+  transition: background-color 0.3s; /* 背景色の変化にアニメーションを適用 */
+}
+
+/* アコーディオンのコンテンツ部分のスタイリング */
+.accordion-content {
+  padding: 15px;
+  line-height: 1.5;
+  background-color: #fff;
+}
+
+/* カスタム矢印のスタイル */
+.accordion-header::after {
+  color: #005848;
+  content: '▼'; /* ここに好きなアイコンを設定できます */
+  position: absolute;
+  right: 10px; /* ヘッダーから右に10pxの位置 */
+  transition: transform 0.3s ease; /* アニメーション効果 */
+} 
+
+/* アコーディオンが開いている時の矢印のスタイル */
+.accordion[open] .accordion-header::after {
+  transform: rotate(180deg); /* 矢印を180度回転 */
+}
+
+/* ホバー時のヘッダーのスタイル */
+.accordion-header:hover {
+  background-color: #e7e7e7; /* ホバー時の背景色 */
+}
+
+/* WebKitベースのブラウザでデフォルトの矢印を消す */
+.accordion .accordion-header::-webkit-details-marker {
+  display: none;
+}
+
+span{
+    color: #E6522A;
+}
+
+body{
+  color: #002C49;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.content{
+  display: flex;
+  width: 375px;
+}
+
+.content li{
+  margin-bottom: 30px;
+}
+
+main{
+  width: 65%;
+}
+
+.sidebar{
+   width: 35%;
+  margin-left: 10px;
+}
+
+h2{
+  font-size: 16px;
+}
+
+li{
+  font-size: 13px;
+}
