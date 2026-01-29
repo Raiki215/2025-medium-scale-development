@@ -1,0 +1,36 @@
+/* ticketページ専用：余白問題を解決 */
+.mobile-content {
+  min-height: auto;
+  height: auto;
+}
+
+/* 色の統一：タイトルはオレンジ、テキストは藍色 */
+#ticket .mobile-content h3,
+#ticket .mobile-content h4,
+#ticket .mobile-content h2 {
+  color: #E6522A;
+}
+
+#ticket .mobile-content p,
+#ticket .mobile-content td,
+#ticket .mobile-content th,
+#ticket .mobile-content strong {
+  color: #002C49;
+}
+
+#ticket .mobile-content a {
+  color: #002C49;
+}
+
+#ticket .mobile-content a:hover {
+  color: #E6522A;
+}
+
+/* Bootstrapのテーブルの色を上書き */
+#ticket .table thead th {
+  color: #002C49;
+}
+
+#ticket .table tbody td {
+  color: #002C49;
+}

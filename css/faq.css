@@ -55,11 +55,9 @@ span{
     color: #E6522A;
 }
 
-body{
-  color: #002C49;
-  margin: 0;
-  display: flex;
-  justify-content: center;
+#faq .mobile-content {
+  min-height: auto;
+  height: auto;
 }
 
 .content{

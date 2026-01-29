@@ -1,0 +1,52 @@
+#timetable body {
+  background-color: #E6522A;
+  color: #002C49;
+}
+
+/* timetableページ専用：余白問題を解決 */
+.mobile-content {
+  min-height: auto;
+  height: auto;
+}
+
+/* 色の統一：タイトルはオレンジ、テキストは藍色 */
+#timetable .mobile-content h3,
+#timetable .mobile-content h4,
+#timetable .mobile-content h2 {
+  color: #E6522A;
+}
+
+#timetable .mobile-content p,
+#timetable .mobile-content td,
+#timetable .mobile-content th {
+  color: #002C49;
+}
+
+#timetable .mobile-content a {
+  color: #002C49;
+}
+
+#timetable .mobile-content a:hover {
+  color: #E6522A;
+}
+
+/* Bootstrapのボタンの色を上書き */
+#timetable .btn-outline-primary {
+  color: #002C49;
+  border-color: #002C49;
+}
+
+#timetable .btn-outline-primary:hover {
+  background-color: #E6522A;
+  border-color: #E6522A;
+  color: #ffffff;
+}
+
+/* Bootstrapのテーブルの色を上書き */
+#timetable .table thead th {
+  color: #002C49;
+}
+
+#timetable .table tbody td {
+  color: #002C49;
+}
