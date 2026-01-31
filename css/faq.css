@@ -56,8 +56,8 @@ span{
 }
 
 #faq .mobile-content {
-  min-height: auto;
-  height: auto;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 
 .content{

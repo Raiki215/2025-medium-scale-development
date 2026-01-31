@@ -238,6 +238,15 @@ footer .copy-text {
   }
 }
 
+/* タブレットサイズの処理 */
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .mobile-content {
+    min-height: auto;
+    height: auto;
+    overflow-y: visible;
+  }
+}
+
 @media screen and (min-width: 1280px) {
   .fixed-ticket {
     display: none;
