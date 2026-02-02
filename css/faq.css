@@ -60,26 +60,22 @@ span{
   overflow-y: auto;
 }
 
-.content{
-  display: flex;
-  width: 375px;
-}
-
-.content li{
-  margin-bottom: 30px;
-}
-
 main{
-  width: 65%;
+  width: 80%;
+  margin: 0 auto;
 }
 
-.sidebar{
-   width: 35%;
-  margin-left: 10px;
+.faq-title {
+  font-size: 16px;
+  color: #E6522A;
+  font-weight: bold;
+  margin: 20px 0 5px 0;
+  text-align: center;
 }
 
 h2{
-  font-size: 16px;
+  font-size: 14px;
+  margin: 20px 0 10px 0;
 }
 
 li{
