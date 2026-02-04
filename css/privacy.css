@@ -1,0 +1,49 @@
+#privacy .mobile-content {
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+/* 目次のスタイル */
+.toc-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.toc-grid li {
+  margin: 0;
+}
+
+.toc-grid a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 0;
+  background: transparent;
+  transition: all 0.3s;
+  display: block;
+  font-size: 14px;
+}
+
+.toc-grid a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+/* ボタンのpadding調整 */
+.side-right .contact-button {
+  display: block;
+}
+
+/* セクションにIDを付けるための余白 */
+h2[id] {
+  scroll-margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .toc-grid {
+    grid-template-columns: 1fr;
+  }
+}

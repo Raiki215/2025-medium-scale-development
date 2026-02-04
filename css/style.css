@@ -241,7 +241,7 @@ footer .copy-text {
 
 /* タブレットサイズの処理（FAQ専用） */
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  #faq .mobile-content {
+  #faq .mobile-content, #guide .mobile-content {
     min-height: auto;
     height: auto;
     overflow-y: visible;

@@ -30,6 +30,15 @@
   color: #E6522A;
 }
 
+/* モバイルナビゲーション内のリンクは白色 */
+#timetable .mobile-nav a {
+  color: #fff;
+}
+
+#timetable .mobile-nav a:hover {
+  color: #fff;
+}
+
 /* Bootstrapのボタンの色を上書き */
 #timetable .btn-outline-primary {
   color: #002C49;

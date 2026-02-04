@@ -4,6 +4,12 @@
     font-family: "Noto Sans JP", sans-serif;
 }
 
+/* コンテンツエリアをスクロール可能にする */
+.mobile-content {
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
 p {
     font-size: 14px;
 }
