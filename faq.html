@@ -4,19 +4,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>よくある質問 - Spring Music Festival 2026</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/faq.css">
 </head>
 
-<body>
-    <html lang="ja">
+<body id="faq">
+  <header>
+    <div class="mobile-header">
+      <div class="header-text">
+        <a href="./index.html" class="header-title">
+          Spring Music Festival 2026
+        </a>
+        <div class="sub-title">
+          <p>May 2 Sat 3 Sun</p>
+          <p>Green park outdoors stage</p>
+        </div>
+      </div>
+      <button class="hamburger-menu" aria-label="メニュー">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
 
-    <head>
-      <meta charset="UTF-8">
-      <title>カスタムアコーディオン矢印</title>
-      <link rel="stylesheet" href="css/faq.css">
-    </head>
-    <div class="content">
+  <div class="layout">
+    <div class="side-left">
+      <p class="page-title">Spring Music Festival 2026</p>
+      <p class="page-subtitle">May 2 Sat 3 Sun</p>
+      <p class="page-subtitle">Green park outdoors stage</p>
+    </div>
+    <div class="mobile-content">
+      <nav class="mobile-nav">
+        <ul>
+          <li><a href="./index.html">トップ</a></li>
+          <li><a href="./artists-index.html">出演者一覧</a></li>
+          <li><a href="./timetable.html">タイムテーブル</a></li>
+          <li><a href="./ticket.html">チケット情報</a></li>
+          <li><a href="./goods.html">グッズ紹介</a></li>
+          <li><a href="./guide.html">来場者ガイド</a></li>
+          <li><a href="./faq.html">よくある質問</a></li>
+          <li><a href="./privacy.html">プライバシーポリシー</a></li>
+          <li><a href="./contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
       <main>
+        <h1 class="faq-title">よくある質問</h1>
         <h2 id="ticket">チケットについて</h2>
         <details class="accordion">
           <summary class="accordion-header"><span>Q</span> チケットは当日券もありますか？</summary>
@@ -97,18 +133,48 @@
           </div>
         </details>
       </main>
-      <aside class="sidebar">
-        <section>
-          <ul>
-            <h2>FAQ</h2>
-            <li><a href="#ticket">チケットについて</a></li>
-            <li><a href="#venue">入場・会場について</a></li>
-            <li><a href="#eat">飲食について</a></li>
-            <li><a href="#others">その他</a></li>
+
+      <footer>
+        <div class="footer-content">
+          <ul class="footer-links">
+            <li><a href="./index.html">トップ</a></li>
+            <li><a href="./artists-index.html">出演者一覧</a></li>
+            <li><a href="#">会場案内</a></li>
+            <li><a href="./timetable.html">タイムテーブル</a></li>
+            <li><a href="./ticket.html">チケット情報</a></li>
+            <li><a href="./goods.html">グッズ紹介</a></li>
+            <li><a href="./guide.html">来場者ガイド</a></li>
+            <li><a href="./faq.html">よくある質問</a></li>
+            <li><a href="./privacy.html">プライバシーポリシー</a></li>
+            <li><a href="./contact.html">お問い合わせ</a></li>
           </ul>
-        </section>
-      </aside>
+          <p class="copy-text">&copy;藤原頼希</p>
+        </div>
+      </footer>
     </div>
+
+    <div class="side-right">
+      <ul class="page-links">
+        <li><a href="#ticket">チケットについて</a></li>
+        <li><a href="#venue">入場・会場について</a></li>
+        <li><a href="#eat">飲食について</a></li>
+        <li><a href="#others">その他</a></li>
+      </ul>
+      <a href="./ticket.html" class="contact-button">お申し込みはこちら→</a>
+    </div>
+  </div>
+
+  <div class="fixed-ticket">
+    <a href="./ticket.html" class="ticket-button">
+      <span class="ticket-title">TICKET</span>
+      <span class="ticket-text">お申込みは<br>こちら→</span>
+    </a>
+  </div>
+
+  <script src="js/hamburger.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

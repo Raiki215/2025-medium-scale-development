@@ -2,194 +2,275 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>timetable</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>タイムテーブル - Spring Music Festival 2026</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/timetable.css">
+  <link rel="stylesheet" href="css/style.css">
 
-    <style>
-        .timetable-body:hover {
-            color: #0d6efd;
-            text-decoration: underline;
-        }
+  <style>
+    .timetable-body:hover {
+      color: #0d6efd;
+      text-decoration: underline;
+    }
 
-        #timetable-body a {
-            color: inherit;
-            text-decoration: none;
-        }
+    #timetable-body a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-        #timetable-body a:hover {
-            color: #0d6efd;
-            text-decoration: underline;
-        }
+    #timetable-body a:hover {
+      color: #0d6efd;
+      text-decoration: underline;
+    }
 
-        .to-index {
-            color: inherit;
-            text-decoration: none;
-        }
+    .to-index {
+      color: inherit;
+      text-decoration: none;
+    }
 
-        .to-index:hover {
-            color: #0d6efd;
-            text-decoration: underline;
-        }
-    </style>
+    .to-index:hover {
+      color: #0d6efd;
+      text-decoration: underline;
+    }
+
+    /* timetableページ専用：余白問題を解決 */
+    .mobile-content {
+      min-height: auto;
+      height: auto;
+    }
+  </style>
 
 </head>
 
-<body>
-    <div class="container ms-3 mt-3">
+<body id="timetable">
+  <header>
+    <div class="mobile-header">
+      <div class="header-text">
+        <a href="index.html#top" class="header-title">
+          Spring Music Festival 2026
+        </a>
+        <div class="sub-title">
+          <p>May 2 Sat 3 Sun</p>
+          <p>Green park outdoors stage</p>
+        </div>
+      </div>
+      <button class="hamburger-menu" aria-label="メニュー">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <div class="side-left">
+      <p class="page-title">Spring Music Festival 2026</p>
+      <p class="page-subtitle">May 2 Sat 3 Sun</p>
+      <p class="page-subtitle">Green park outdoors stage</p>
+    </div>
+    <div class="mobile-content">
+      <nav class="mobile-nav">
+        <ul>
+          <li><a href="./index.html">トップ</a></li>
+          <li><a href="./artists-index.html">出演者一覧</a></li>
+          <li><a href="#">会場案内</a></li>
+          <li><a href="./timetable.html">タイムテーブル</a></li>
+          <li><a href="./ticket.html">チケット情報</a></li>
+          <li><a href="./goods.html">グッズ紹介</a></li>
+          <li><a href="./guide.html">来場者ガイド</a></li>
+          <li><a href="./faq.html">よくある質問</a></li>
+          <li><a href="./privacy.html">プライバシーポリシー</a></li>
+          <li><a href="./contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+
+      <div class="container ms-3 mt-3">
         <h3>タイムテーブル</h3>
 
         <div class="btn-group mb-3">
-            <button class="btn btn-outline-primary" onclick="showDay('day1')">5月2日(土)</button>
-            <button class="btn btn-outline-primary" onclick="showDay('day2')">5月3日(日)</button>
+          <button class="btn btn-outline-primary" onclick="showDay('day1')">5月2日(土)</button>
+          <button class="btn btn-outline-primary" onclick="showDay('day2')">5月3日(日)</button>
         </div>
 
         <h4 id="day-title"></h4>
 
         <table class="table table-bordered">
 
-            <thead>
-                <tr>
-                    <th>時間</th>
-                    <th>メインステージ</th>
-                    <th>サブステージ</th>
-                </tr>
-            </thead>
-            <tbody id="timetable-body">
-                <tr>
-                    <td>11:00-11:40</td>
-                    <td>
-                        <a href="artists-1.html">The Blossom Drive</a>
-                    </td>
-                    <td>-</td>
-                </tr>
+          <thead>
+            <tr>
+              <th>時間</th>
+              <th>メインステージ</th>
+              <th>サブステージ</th>
+            </tr>
+          </thead>
+          <tbody id="timetable-body">
+            <tr>
+              <td>11:00-11:40</td>
+              <td>
+                <a href="artists-1.html">The Blossom Drive</a>
+              </td>
+              <td>-</td>
+            </tr>
 
-                <tr>
-                    <td>12:00-12:40</td>
-                    <td><a href="artists-2.html">高橋リオ</a></td>
-                    <td><a href="artists-4.html">Morning Echoes</a></td>
-                </tr>
-                <tr>
-                    <td>13:00-13:40</td>
-                    <td>-</td>
-                    <td><a href="artists-6.html">Velvet Groove</a></td>
-                </tr>
-                <tr>
-                    <td>14:00-14:40</td>
-                    <td><a href="artists-3.html">DJ Breeze</a></td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>15:00-15:40</td>
-                    <td><a href="artists-5.html">中村蓮</a></td>
-                    <td><a href="artists-4.html">Morning Echoes</a></td>
-                </tr>
-                <tr>
-                    <td>16:00-16:40</td>
-                    <td>-</td>
-                    <td><a href="artists-6.html">Velvet Groove</a></td>
-                </tr>
-                <tr>
-                    <td>17:00-19:00</td>
-                    <td><a href="artists-1.html">The Blossom Drive
-                            -スペシャルライブ</a></td>
-                    <td>-</td>
-                </tr>
-            </tbody>
+            <tr>
+              <td>12:00-12:40</td>
+              <td><a href="artists-2.html">高橋リオ</a></td>
+              <td><a href="artists-4.html">Morning Echoes</a></td>
+            </tr>
+            <tr>
+              <td>13:00-13:40</td>
+              <td>-</td>
+              <td><a href="artists-6.html">Velvet Groove</a></td>
+            </tr>
+            <tr>
+              <td>14:00-14:40</td>
+              <td><a href="artists-3.html">DJ Breeze</a></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>15:00-15:40</td>
+              <td><a href="artists-5.html">中村蓮</a></td>
+              <td><a href="artists-4.html">Morning Echoes</a></td>
+            </tr>
+            <tr>
+              <td>16:00-16:40</td>
+              <td>-</td>
+              <td><a href="artists-6.html">Velvet Groove</a></td>
+            </tr>
+            <tr>
+              <td>17:00-19:00</td>
+              <td><a href="artists-1.html">The Blossom Drive
+                  -スペシャルライブ</a></td>
+              <td>-</td>
+            </tr>
+          </tbody>
         </table>
         <a href="artists-index.html" class="to-index">一覧へ</a>
+      </div>
 
-
-
-
+      <footer>
+        <div class="footer-content">
+          <ul class="footer-links">
+            <li><a href="index.html">トップ</a></li>
+            <li><a href="#">ニュース</a></li>
+            <li><a href="#">出演者一覧</a></li>
+            <li><a href="#">会場案内</a></li>
+            <li><a href="timetable.html">タイムテーブル</a></li>
+            <li><a href="#">チケット情報</a></li>
+            <li><a href="#">グッズ紹介</a></li>
+            <li><a href="#">来場者ガイド</a></li>
+            <li><a href="faq.html">よくある質問</a></li>
+            <li><a href="#">プライバシーポリシー</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+          </ul>
+          <p class="copy-text">&copy;藤原頼希</p>
+        </div>
+      </footer>
     </div>
-    <script>
-        const data = {
-            day1: [
-                ["11:00-11:40", "The Blossom Drive", "-"],
-                ["12:00-12:40", "高橋リオ", "Morning Echoes"],
-                ["13:00-13:40", "-", "Velvet Groove"],
-                ["14:00-14:40", "DJ Breeze", "-"],
-                ["15:00-15:40", "中村蓮", "Morning Echoes"],
-                ["16:00-16:40", "-", "Velvet Groove"],
-                ["17:00-19:00", "The Blossom Drive -スペシャルライブ", "-"]
-            ],
-            day2: [
-                ["11:00-11:40", "Crimson Waves", "-"],
-                ["12:00-12:40", "宮本サクラ", "風雅(ふうが)"],
-                ["13:00-13:40", "-", "Neon Lights"],
-                ["14:00-14:40", "森下晴人", "-"],
-                ["15:00-15:40", "宮本サクラ", "風雅(ふうが)"],
-                ["16:00-16:40", "-", "Neon Lights"],
-                ["17:00-19:00", "Horizon Strings -フィナーレ", "-"]
-            ]
-        };
+    <div class="side-right">
+      <a href="#" class="contact-button">お申し込みはこちら→</a>
+    </div>
+  </div>
 
-        const artistLinks = {
-            "The Blossom Drive": "artists-1.html",
-            "高橋リオ": "artists-2.html",
-            "DJ Breeze": "artists-3.html",
-            "Morning Echoes": "artists-4.html",
-            "中村蓮": "artists-5.html",
-            "Velvet Groove": "artists-6.html"
-        };
-        const artistLinks2 = {
-            "Crimson Waves": "artists-7.html",
-            "宮本サクラ": "artists-8.html",
-            "森下晴人": "artists-9.html",
-            "風雅(ふうが)": "artists-10.html",
-            "Neon Lights": "artists-11.html",
-            "Horizon Strings": "artists-12.html"
-        };
+  <!-- 固定チケットボタン -->
+  <div class="fixed-ticket">
+    <a href="#" class="ticket-button">
+      <span class="ticket-title">TICKET</span>
+      <span class="ticket-text">お申込みは<br>こちら→</span>
+    </a>
+  </div>
+
+  <script>
+    const data = {
+      day1: [
+        ["11:00-11:40", "The Blossom Drive", "-"],
+        ["12:00-12:40", "高橋リオ", "Morning Echoes"],
+        ["13:00-13:40", "-", "Velvet Groove"],
+        ["14:00-14:40", "DJ Breeze", "-"],
+        ["15:00-15:40", "中村蓮", "Morning Echoes"],
+        ["16:00-16:40", "-", "Velvet Groove"],
+        ["17:00-19:00", "The Blossom Drive -スペシャルライブ", "-"]
+      ],
+      day2: [
+        ["11:00-11:40", "Crimson Waves", "-"],
+        ["12:00-12:40", "宮本サクラ", "風雅(ふうが)"],
+        ["13:00-13:40", "-", "Neon Lights"],
+        ["14:00-14:40", "森下晴人", "-"],
+        ["15:00-15:40", "宮本サクラ", "風雅(ふうが)"],
+        ["16:00-16:40", "-", "Neon Lights"],
+        ["17:00-19:00", "Horizon Strings -フィナーレ", "-"]
+      ]
+    };
+
+    const artistLinks = {
+      "The Blossom Drive": "artists-1.html",
+      "高橋リオ": "artists-2.html",
+      "DJ Breeze": "artists-3.html",
+      "Morning Echoes": "artists-4.html",
+      "中村蓮": "artists-5.html",
+      "Velvet Groove": "artists-6.html"
+    };
+    const artistLinks2 = {
+      "Crimson Waves": "artists-7.html",
+      "宮本サクラ": "artists-8.html",
+      "森下晴人": "artists-9.html",
+      "風雅(ふうが)": "artists-10.html",
+      "Neon Lights": "artists-11.html",
+      "Horizon Strings": "artists-12.html"
+    };
 
 
-        const allArtistLinks = {
-            ...artistLinks,
-            ...artistLinks2
-        };
-
-
-
-        function showDay(day) {
-            const tbody = document.getElementById("timetable-body");
-            const title = document.getElementById("day-title");
-
-            title.textContent = day === "day1" ? "5月2日(土)" : "5月3日(日)";
-
-            tbody.innerHTML = "";
-
-            data[day].forEach(row => {
-                const tr = document.createElement("tr");
-
-                row.forEach((cell, index) => {
-                    const td = document.createElement("td");
-
-                    // アーティスト名がリンク表にある場合はリンク化
-                    const artistName = Object.keys(allArtistLinks).find(name => cell.startsWith(name));
-
-                    if (artistName) {
-                        td.innerHTML = `<a href="${allArtistLinks[artistName]}">${cell}</a>`;
-                    } else {
-                        td.textContent = cell;
-                    }
+    const allArtistLinks = {
+      ...artistLinks,
+      ...artistLinks2
+    };
 
 
 
-                    tr.appendChild(td);
-                });
+    function showDay(day) {
+      const tbody = document.getElementById("timetable-body");
+      const title = document.getElementById("day-title");
 
-                tbody.appendChild(tr);
-            });
-        }
+      title.textContent = day === "day1" ? "5月2日(土)" : "5月3日(日)";
 
-        // 初期表示
-        showDay("day1");
-    </script>
+      tbody.innerHTML = "";
+
+      data[day].forEach(row => {
+        const tr = document.createElement("tr");
+
+        row.forEach((cell, index) => {
+          const td = document.createElement("td");
+
+          // アーティスト名がリンク表にある場合はリンク化
+          const artistName = Object.keys(allArtistLinks).find(name => cell.startsWith(name));
+
+          if (artistName) {
+            td.innerHTML = `<a href="${allArtistLinks[artistName]}">${cell}</a>`;
+          } else {
+            td.textContent = cell;
+          }
+
+
+
+          tr.appendChild(td);
+        });
+
+        tbody.appendChild(tr);
+      });
+    }
+
+    // 初期表示
+    showDay("day1");
+  </script>
+
+  <script src="js/hamburger.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
 </body>
 
 </html>
