@@ -15,7 +15,6 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   min-height: 100vh;
-  padding: 0;
 }
 
 .mobile-content::-webkit-scrollbar {

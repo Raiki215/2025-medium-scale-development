@@ -1,5 +1,11 @@
 /* Artists詳細ページ専用CSS */
 
+#artists-detail .mobile-content {
+  overflow-y: auto;
+  height: 100vh;
+  z-index: 1;
+}
+
 .artist-content {
   padding: 20px;
 }
@@ -17,7 +23,6 @@
   font-size: 20px;
   font-weight: bold;
   color: #E6522A;
-  margin: 20px 0;
 }
 
 .artist-image {
@@ -73,13 +78,11 @@
   }
 
   .artist-details {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    display: block;
   }
 
   .artist-image {
-    margin-bottom: 0;
+    margin-bottom: 20px;
   }
 }
 
