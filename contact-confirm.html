@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>確認画面</title>
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .phone {
+      max-width: 375px;
+      margin: 30px auto;
+      background: #fff;
+      border-radius: 20px;
+      padding: 20px;
+    }
+
+    .row-item {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+      font-size: 14px;
+    }
+
+    .label {
+      width: 40%;
+    }
+
+    .value {
+      width: 60%;
+      text-align: right;
+      word-break: break-all;
+    }
+
+    .btn-area {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .btn-small {
+      width: 45%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    #message {
+      text-align: right !important;
+    }
+
+    .phone {
+      font-size: 13px;
+    }
+
+    .btn-primary {
+      background-color: #E6522A;
+      border-color: #E6522A;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active,
+    .btn-primary:focus:active,
+    .btn-primary:not(:disabled):not(.disabled):active {
+      background-color: #E6522A;
+      border-color: #E6522A;
+      box-shadow: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="mobile-header">
+      <div class="header-text">
+        <a href="./index.html" class="header-title">
+          Spring Music Festival 2026
+        </a>
+        <div class="sub-title">
+          <p>May 2 Sat 3 Sun</p>
+          <p>Green park outdoors stage</p>
+        </div>
+      </div>
+      <button class="hamburger-menu" aria-label="メニュー">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <div class="side-left">
+      <p class="page-title">Spring Music Festival 2026</p>
+      <p class="page-subtitle">May 2 Sat 3 Sun</p>
+      <p class="page-subtitle">Green park outdoors stage</p>
+    </div>
+    <div class="mobile-content">
+      <nav class="mobile-nav">
+        <ul>
+          <li><a href="./index.html">トップ</a></li>
+          <li><a href="./artists-index.html">出演者一覧</a></li>
+          <li><a href="./access.html">会場案内</a></li>
+          <li><a href="./timetable.html">タイムテーブル</a></li>
+          <li><a href="./ticket.html">チケット情報</a></li>
+          <li><a href="./goods.html">グッズ紹介</a></li>
+          <li><a href="./guide.html">来場者ガイド</a></li>
+          <li><a href="./faq.html">よくある質問</a></li>
+          <li><a href="./privacy.html">プライバシーポリシー</a></li>
+          <li><a href="./contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <div class="phone text-center">
+        <div class="mb-3">
+          <div class="rounded-circle bg-secondary text-white d-inline-flex align-items-center justify-content-center"
+            style="width:60px;height:60px;">?</div>
+        </div>
+
+        <h4 class="mb-3">以下のページで送信いたしますか？</h4>
+
+        <div class="row-item d-flex">
+          <div class="label">お名前</div>
+          <div class="value" id="name"></div>
+        </div>
+
+        <div class="row-item d-flex">
+          <div class="label">メール</div>
+          <div class="value" id="email"></div>
+        </div>
+
+        <div class="row-item d-flex">
+          <div class="label">電話番号</div>
+          <div class="value" id="tel"></div>
+        </div>
+
+        <div class="row-item d-flex">
+          <div class="label">問い合わせ種別</div>
+          <div class="value" id="category"></div>
+        </div>
+
+        <div class="row-item d-flex">
+          <div class="label mb-1">問い合わせ内容</div>
+          <div class="value text-start" id="message"></div>
+        </div>
+
+        <div class="btn-area">
+          <button type="button" class="btn btn-secondary btn-small" onclick="history.back()">戻る</button>
+          <button type="button" class="btn btn-primary btn-small"
+            onclick="location.href='contact-thanks.html'">送信</button>
+        </div>
+      </div>
+    </div>
+    <div class="side-right">
+    </div>
+  </div>
+
+  <script src="js/hamburger.js"></script>
+
+  <script>
+    window.addEventListener("load", function () {
+      document.getElementById("name").textContent =
+        sessionStorage.getItem("name") || "";
+
+      document.getElementById("email").textContent =
+        sessionStorage.getItem("email") || "";
+
+      document.getElementById("tel").textContent =
+        sessionStorage.getItem("phone") || "";
+
+      const categoryMap = {
+        ticket: "チケットについて",
+        venue: "会場について",
+        people: "出演者について",
+        other: "その他"
+      };
+
+      const categoryValue = sessionStorage.getItem("category");
+      document.getElementById("category").textContent =
+        categoryMap[categoryValue] || "";
+
+      document.getElementById("message").textContent =
+        sessionStorage.getItem("message") || "";
+    });
+  </script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

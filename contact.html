@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせフォーム</title>
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <style>
+    .phone {
+      max-width: 375px;
+      margin: 30px auto;
+      background: #fff;
+      border-radius: 20px;
+      padding: 20px;
+    }
+
+    .row-item {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+      font-size: 14px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .message {
+      color: #1f3b57;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 0.9rem;
+    }
+
+    input.invalid,
+    textarea.invalid,
+    select.invalid {
+      border-color: red !important;
+    }
+
+    .btn-primary {
+      background-color: #E6522A;
+      border-color: #E6522A;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active,
+    .btn-primary:focus:active,
+    .btn-primary:not(:disabled):not(.disabled):active {
+      background-color: #E6522A;
+      border-color: #E6522A;
+      box-shadow: none;
+    }
+  </style>
+</head>
+
+<body id="contact">
+  <header>
+    <div class="mobile-header">
+      <div class="header-text">
+        <a href="./index.html" class="header-title">
+          Spring Music Festival 2026
+        </a>
+        <div class="sub-title">
+          <p>May 2 Sat 3 Sun</p>
+          <p>Green park outdoors stage</p>
+        </div>
+      </div>
+      <button class="hamburger-menu" aria-label="メニュー">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <div class="side-left">
+      <p class="page-title">Spring Music Festival 2026</p>
+      <p class="page-subtitle">May 2 Sat 3 Sun</p>
+      <p class="page-subtitle">Green park outdoors stage</p>
+    </div>
+    <div class="mobile-content">
+      <nav class="mobile-nav">
+        <ul>
+          <li><a href="./index.html">トップ</a></li>
+          <li><a href="./artists-index.html">出演者一覧</a></li>
+          <li><a href="./access.html">会場案内</a></li>
+          <li><a href="./timetable.html">タイムテーブル</a></li>
+          <li><a href="./ticket.html">チケット情報</a></li>
+          <li><a href="./goods.html">グッズ紹介</a></li>
+          <li><a href="./guide.html">来場者ガイド</a></li>
+          <li><a href="./faq.html">よくある質問</a></li>
+          <li><a href="./privacy.html">プライバシーポリシー</a></li>
+          <li><a href="./contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-wrapper">
+        <h2>お問い合わせフォーム</h2>
+        <form id="contactForm">
+          <input type="hidden" name="redirectTo" value="contact-thanks.html">
+
+          <div class="mb-3">
+            <label for="name" class="form-label">お名前<span class="text-danger">※必須</span></label>
+            <input type="text" class="form-control form-control-lg" id="name" name="name" placeholder="森岡太郎" required
+              minlength="2" maxlength="30">
+            <div class="error-message" id="nameError"></div>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">メールアドレス<span class="text-danger">※必須</span></label>
+            <input type="email" class="form-control form-control-lg" id="email" name="email"
+              placeholder="example@example.com" required>
+            <div class="error-message" id="emailError"></div>
+          </div>
+
+          <div class="mb-3">
+            <label for="phone" class="form-label">電話番号<span class="text-secondary">(任意)</span></label>
+            <input type="tel" class="form-control form-control-lg" id="phone" name="phone" placeholder="09012345678">
+            <div class="error-message" id="phoneError"></div>
+          </div>
+
+          <div class="mb-3">
+            <label for="Q_Category" class="form-label">お問い合わせ種別<span class="text-danger">※必須</span></label>
+            <select name="Q_Category" id="Q_Category" class="form-select form-select-lg" required>
+              <option value="">選択してください</option>
+              <option value="ticket">チケットについて</option>
+              <option value="venue">会場について</option>
+              <option value="people">出演者について</option>
+              <option value="other">その他</option>
+            </select>
+            <div class="error-message" id="categoryError"></div>
+          </div>
+
+          <div class="mb-4">
+            <label for="Q-Ask" class="form-label">お問い合わせ内容<span class="text-danger">※必須</span></label>
+            <textarea name="message" id="Q-Ask" class="form-control form-control-lg" rows="5" required></textarea>
+            <div class="error-message" id="askError"></div>
+          </div>
+
+          <div class="mb-4">
+            <a href="privacy.html">
+              プライバシーポリシーについて
+            </a>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary px-4 py-2" id="nextPage">
+              送信する
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="side-right">
+    </div>
+  </div>
+
+  <script src="js/hamburger.js"></script>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // 入力値を保存
+      sessionStorage.setItem("name", document.getElementById("name").value);
+      sessionStorage.setItem("email", document.getElementById("email").value);
+      sessionStorage.setItem("phone", document.getElementById("phone").value);
+      sessionStorage.setItem("category", document.getElementById("Q_Category").value);
+      sessionStorage.setItem("message", document.getElementById("Q-Ask").value);
+
+      // 確認画面へ遷移
+      window.location.href = "contact-confirm.html";
+    });
+
+    function enableEditing() {
+      const fields = ['name', 'email', 'phone', 'Q_Category', 'Q-Ask'];
+      fields.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.readOnly = false;
+        if (el && el.tagName === "SELECT") el.disabled = false;
+      });
+    }
+
+    window.addEventListener('load', () => {
+      const savedValue = sessionStorage.getItem('saved');
+      if (savedValue) {
+        input.value = savedValue;
+      }
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+/* Artists Index ページ専用CSS */
+
+#artists-index .mobile-content {
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+.artists-index-content {
+  padding: 20px;
+}
+
+.artists-index-content h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #002C49;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #E6522A;
+}
+
+.artists-index-content a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.artists-index-content .to-timetable {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #002C49;
+  font-weight: 500;
+}
+
+.artists-index-content .to-timetable:hover {
+  color: #E6522A;
+  text-decoration: underline;
+}
+
+.artists-index-content .card {
+  border: 2px solid #DBCFC4;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.artists-index-content .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 44, 73, 0.2);
+  border-color: #E6522A;
+}
+
+.artists-index-content .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.artists-index-content .card-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #002C49;
+  margin-bottom: 8px;
+}
+
+.artists-index-content .card-text {
+  font-size: 14px;
+  color: #666;
+}
+
+/* レスポンシブ対応 */
+@media screen and (min-width: 768px) {
+  .artists-index-content .card img {
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .artists-index-content {
+    padding: 40px;
+  }
+
+  .artists-index-content h2 {
+    font-size: 28px;
+  }
+
+  .artists-index-content .card img {
+    height: 280px;
+  }
+
+  /* PC表示時のアーティストリンク2列表示 */
+  #artists-index .side-right .page-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+    row-gap: 15px;
+    margin: 15% 5% 0 5%;
+  }
+
+  #artists-index .side-right .page-links a {
+    margin: 0;
+    font-size: 16px;
+    text-align: left;
+    padding: 8px 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  #artists-index .side-right .contact-button {
+    margin-top: 20%;
+  }
+}
